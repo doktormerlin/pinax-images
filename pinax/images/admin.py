@@ -5,8 +5,8 @@ from .models import Image, ImageSet
 
 class ImageInline(admin.TabularInline):
     model = Image
-    fields = ["image", "created_by", "preview"]
-    readonly_fields = ["preview"]
+    fields = ["image", "created_by", "id"]
+    readonly_fields = ["id"]
 
     def preview(self, obj):
         if obj.pk:
