@@ -13,7 +13,8 @@ DEFAULT_SETTINGS = dict(
         "django.contrib.contenttypes",
         "django.contrib.sites",
         "pinax.images",
-        "pinax.images.tests"
+        "pinax.images.tests",
+        'optimized_image',
     ],
     MIDDLEWARE=[],
     DATABASES={
@@ -25,6 +26,7 @@ DEFAULT_SETTINGS = dict(
     SITE_ID=1,
     ROOT_URLCONF="pinax.images.tests.urls",
     SECRET_KEY="notasecret",
+    OPTIMIZED_IMAGE_METHOD='pillow',
 )
 
 

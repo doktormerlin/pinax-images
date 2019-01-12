@@ -26,6 +26,7 @@ var/
 *.egg
 *.eggs
 .python-version
+*.pypirc
 
 # Installer logs
 pip-log.txt

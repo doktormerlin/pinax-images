@@ -30,16 +30,4 @@ So far, the only way to install it, is to install it from source.
 
 ## Usage
 
-* Make sure to add `'optimized_image` to your installed apps:
-
-```python
-INSTALLED_APPS = [
-    ...
-    'optimized_image',
-]
-...
-OPTIMIZED_IMAGE_METHOD = 'pillow'
-```
-
-
 For other usage, please take a look at the [original README file](README_original.md)
