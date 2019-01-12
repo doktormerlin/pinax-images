@@ -30,4 +30,6 @@ So far, the only way to install it, is to install it from source.
 
 ## Usage
 
+Add `OPTIMIZED_IMAGE_METHOD = 'pillow'` to your settings.py
+
 For other usage, please take a look at the [original README file](README_original.md)
