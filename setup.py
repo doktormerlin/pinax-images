@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "3.1.1-rc1"
+VERSION = "3.1.2-rc1"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-images.svg
     :target: https://pypi.python.org/pypi/pinax-images/
