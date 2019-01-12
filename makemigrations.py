@@ -34,6 +34,9 @@ def run(*args):
     if not settings.configured:
         settings.configure(**DEFAULT_SETTINGS)
 
+    if hasattr(settings, 'OPTIMIZED_IMAGE_METHOD'):
+        settings.OPTIMIZED_IMAGE_METHOD = 'pillow'
+
     django.setup()
 
     parent = os.path.dirname(os.path.abspath(__file__))
