@@ -85,6 +85,7 @@ setup(
         "pilkit>=1.1.13",
         "pillow>=3.3.0",
         "pytz>=2016.6.1",
+        "django-optimized-image>=0.1.0",
     ],
     tests_require=[
         "django-test-plus>=1.0.11",

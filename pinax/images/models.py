@@ -5,8 +5,10 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
+from django.conf import Settings
 
 from imagekit.models import ImageSpecField
+from optimized_image.fields import OptimizedImageField
 
 
 def image_upload_to(instance, filename):
@@ -36,7 +38,7 @@ class ImageSet(models.Model):
 @python_2_unicode_compatible
 class Image(models.Model):
     image_set = models.ForeignKey(ImageSet, related_name="images", on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=image_upload_to)
+    image = OptimizedImageField(upload_to=image_upload_to)
     original_filename = models.CharField(max_length=500)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="images", on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now)

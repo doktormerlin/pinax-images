@@ -7,6 +7,7 @@ This is a fork of [Pinax Images](https://github.com/pinax/pinax-images) with som
 1. Removed "preview" field in Admin.py. The <img/> Tag did not work and there already is a clickable link to the image in the Image field
 2. Added "ID" readonly field to the inline-admin, so that [pinax-blog](https://github.com/pinax/pinax-blog) images are usable again.
 3. Added "Alt text" field to make alt-texts in template possible
+4. Added image optimization using [django-optimized-image](https://pypi.org/project/django-optimized-image/)
 
 ## Installation
 
@@ -29,4 +30,16 @@ So far, the only way to install it, is to install it from source.
 
 ## Usage
 
-For usage, please take a look at the [original README file](README_original.md)
+* Make sure to add `'optimized_image` to your installed apps:
+
+```python
+INSTALLED_APPS = [
+    ...
+    'optimized_image',
+]
+...
+OPTIMIZED_IMAGE_METHOD = 'pillow'
+```
+
+
+For other usage, please take a look at the [original README file](README_original.md)
