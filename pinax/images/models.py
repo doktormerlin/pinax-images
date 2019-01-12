@@ -40,6 +40,7 @@ class Image(models.Model):
     original_filename = models.CharField(max_length=500)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="images", on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now)
+    alt_text = models.CharField(default="", max_length=150, blank=True, null=False)
 
     thumbnail = ImageSpecField(source="image", id="pinax_images:image:thumbnail")
     list_thumbnail = ImageSpecField(source="image", id="pinax_images:image:list_thumbnail")

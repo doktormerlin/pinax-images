@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "3.0.1"
+VERSION = "3.0.1-rc1"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-images.svg
     :target: https://pypi.python.org/pypi/pinax-images/
@@ -49,13 +49,13 @@ Supported Django and Python Versions
 """
 
 setup(
-    author="Pinax Team",
-    author_email="team@pinaxproject.com",
+    author="Pinax Team/Merlin Dienst",
+    author_email="github@mdrone.de",
     description="an app for managing collections of images associated with a content object",
-    name="pinax-images",
+    name="pinax-images-rethought",
     long_description=LONG_DESCRIPTION,
     version=VERSION,
-    url="http://github.com/pinax/pinax-images/",
+    url="http://github.com/doktormerlin/pinax-images-rethought/",
     license="MIT",
     packages=find_packages(),
     package_data={
